@@ -1,10 +1,9 @@
-#Special thanks to: https://realpython.com/python-logging/
 import logging
 
 logger = logging.getLogger(__name__)
 #Magic necessary to set minimum logging level for all handlers
 logger.setLevel(logging.DEBUG)
-#do not use this as advised elsewhere - logging.basicConfig(level=logging.DEBUG)
+#do not use this as advised sowhere - logging.basicConfig(level=logging.DEBUG)
 
 # Create handlers
 c_handler = logging.StreamHandler()
@@ -12,9 +11,9 @@ f_handler = logging.FileHandler('file.log')
 
 
 # Create formatters and add it to handlers
-# Find more arguments at https://docs.python.org/3/library/logging.html
-c_format = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
-f_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
+c_format = logging.Formatter('T:%(asctime)s - M:%(module)s - LN:%(lineno)4d - LVL:%(levelname)s - %(message)s',
+           datefmt='%d/%m/%y %H:%M:%S')
+f_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s', datefmt='%d-%m-%y %H:%M:%S')
 c_handler.setFormatter(c_format)
 f_handler.setFormatter(f_format)
 
