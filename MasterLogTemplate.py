@@ -1,8 +1,9 @@
-#Thanks to RealPython: https://realpython.com/python-logging/
 import logging
 
 logger = logging.getLogger(__name__)
-#logging.basicConfig(level=logging.DEBUG)
+#Magic necessary to set minimum logging level for all handlers
+logger.setLevel(logging.DEBUG)
+#do not use this as advised sowhere - logging.basicConfig(level=logging.DEBUG)
 
 # Create handlers
 c_handler = logging.StreamHandler()
@@ -20,6 +21,7 @@ c_handler.setLevel(logging.DEBUG)
 f_handler.setLevel(logging.DEBUG)
 logger.addHandler(c_handler)
 logger.addHandler(f_handler)
+
 
 
 
