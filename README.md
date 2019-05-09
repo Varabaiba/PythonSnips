@@ -1,4 +1,4 @@
 # PythonSnips
 Useful Snippets for Python
 
-Just playing arount. Don't take serious
+Just playing around. Don't take serious
