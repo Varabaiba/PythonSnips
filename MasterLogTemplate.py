@@ -4,7 +4,7 @@ import logging
 logger = logging.getLogger(__name__)
 #Magic necessary to set minimum logging level for all handlers
 logger.setLevel(logging.DEBUG)
-#do not use this as advised sowhere - logging.basicConfig(level=logging.DEBUG)
+#do not use this as advised elsewhere - logging.basicConfig(level=logging.DEBUG)
 
 # Create handlers
 c_handler = logging.StreamHandler()
