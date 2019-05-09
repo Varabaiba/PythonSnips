@@ -12,6 +12,7 @@ f_handler = logging.FileHandler('file.log')
 
 
 # Create formatters and add it to handlers
+# Find more arguments at https://docs.python.org/3/library/logging.html
 c_format = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
 f_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S')
 c_handler.setFormatter(c_format)
