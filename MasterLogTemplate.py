@@ -1,3 +1,4 @@
+#Special thanks to: https://realpython.com/python-logging/
 import logging
 
 logger = logging.getLogger(__name__)
