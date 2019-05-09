@@ -1,10 +1,10 @@
-#Special thanks to: https://realpython.com/python-logging/
+# Special thanks to: https://realpython.com/python-logging/
 import logging
 
 logger = logging.getLogger(__name__)
-#Magic necessary to set minimum logging level for all handlers
+# Magic necessary to set minimum logging level for all handlers
 logger.setLevel(logging.DEBUG)
-#do not use this as advised sowhere - logging.basicConfig(level=logging.DEBUG)
+# Do not use this as advised elsewhere - logging.basicConfig(level=logging.DEBUG)
 
 # Create handlers
 c_handler = logging.StreamHandler()
@@ -23,8 +23,6 @@ c_handler.setLevel(logging.DEBUG)
 f_handler.setLevel(logging.DEBUG)
 logger.addHandler(c_handler)
 logger.addHandler(f_handler)
-
-
 
 
 logger.debug('This is a debug message')
