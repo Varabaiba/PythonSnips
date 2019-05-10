@@ -9,7 +9,7 @@ parser.add_argument('-x', '--xpand', dest='expander', nargs='?', const='A', defa
 
 parser.add_argument('-n', '--nora', dest='pusher', type=int, default=0, help="Pusher level [Def:0]")
 
-parser.add_argument('activity', nargs='?',  default='fly', choices=['fly', 'swim', 'walk'])
+parser.add_argument('activity', nargs='?',  default='fly', choices=['fly', 'swim', 'walk'], help="Select among them")
 
 parser.add_argument('comms', metavar='CID', type=int, nargs='+', help=':Comms list')
 
