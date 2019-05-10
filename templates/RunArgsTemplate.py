@@ -5,9 +5,9 @@ parser = argparse.ArgumentParser(prog='this app', description='Here comes the ma
                                  epilog= "Final words")
 
 # No-option takes default value, option but no arg takes const value
-parser.add_argument('-x', '--xpand', metavar='Y', dest='expander', nargs='?', const='A', default='D', help="Expander status [A/D/x]")
+parser.add_argument('-x', '--xpand', metavar='Z', dest='expander', nargs='?', const='A', default='D', help="Expander status [A/D/x]")
 
-parser.add_argument('-n', '--nora' metavar='Y', dest='pusher', type=int, default=0, help="Pusher level [Def:0]")
+parser.add_argument('-n', '--nora', metavar='Y', dest='pusher', type=int, default=0, help="Pusher level [Def:0]")
 
 parser.add_argument('activity', nargs='?',  default='fly', choices=['fly', 'swim', 'walk'], help="Select among them")
 
