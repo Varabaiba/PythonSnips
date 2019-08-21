@@ -4,7 +4,8 @@ app = Flask(__name__)
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def catch_all(path):
-    return 'You want path: %s' % path
+    xSubPath = path.split("/")
+    return 'You want path: %s' % xSubPath
 
 if __name__ == '__main__':
     app.run()
