@@ -1,0 +1,20 @@
+class IterMain:
+    def __iter__(self):
+        for attr, value in self.__dict__.items():
+            yield attr, value
+
+class IterOne(IterMain):
+    pass
+
+
+class IterTwo(IterMain):
+    pass
+
+x = IterOne()
+
+x.alfa = 1
+x.beta = 2
+print(dict(x))
+
+for z in x:
+    print(z)
