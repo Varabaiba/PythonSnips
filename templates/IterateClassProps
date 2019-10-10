@@ -1,3 +1,5 @@
+# inspired by https://stackoverflow.com/questions/11637293/iterate-over-object-attributes-in-python
+
 class IterMain:
     def __iter__(self):
         for attr, value in self.__dict__.items():
