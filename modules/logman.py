@@ -1,26 +1,26 @@
 import logging
 
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
+log = logging.getLogger(__name__)
+log.setLevel(logging.DEBUG)
 
 # Stream handler definition
-c_handler = logging.StreamHandler()
-c_format = logging.Formatter('T:%(asctime)s - M:%(module)s - LN:%(lineno)4d - LVL:%(levelname)s - %(message)s', 
+cons_log = logging.StreamHandler()
+c_format = logging.Formatter('T:%(asctime)s - M:%(module)s - LN:%(lineno)4d - LVL:%(levelname)s - %(message)s',
                              datefmt='%d/%m/%y %H:%M:%S')
-c_handler.setFormatter(c_format)
-c_handler.setLevel(logging.DEBUG)
+cons_log.setFormatter(c_format)
+cons_log.setLevel(logging.DEBUG)
 # Master handler enabler
-logger.addHandler(c_handler)
+log.addHandler(cons_log)
 
 
 # File handler definition
-f_handler = logging.FileHandler('file.log')
-f_format = logging.Formatter('T:%(asctime)s - M:%(module)s - LN:%(lineno)4d - LVL:%(levelname)s - %(message)s', 
+file_log = logging.FileHandler('debug.log')
+f_format = logging.Formatter('T:%(asctime)s - M:%(module)s - LN:%(lineno)4d - LVL:%(levelname)s - %(message)s',
                              datefmt='%d/%m/%y %H:%M:%S')
-f_handler.setFormatter(f_format)
-f_handler.setLevel(logging.DEBUG)
+file_log.setFormatter(f_format)
+file_log.setLevel(logging.DEBUG)
 # Master handler enabler
-logger.addHandler(f_handler)
+log.addHandler(file_log)
 
 # Regular Logger Calls
 # logger.debug('This is a debug message')
